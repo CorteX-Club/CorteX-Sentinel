@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cortex-purple: #A35CFF;
+  --dark-bg: #121212;
+  --dark-card: #1E1E1E;
+  --dark-border: #333333;
+}
+
+body {
+  @apply bg-dark-bg text-white;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Garantir que o corpo tenha bordas arredondadas na aplicação Electron */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Estilos específicos para quando o app está rodando no Electron */
+.electron-app {
+  @apply bg-dark-bg;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Tamanho mínimo da aplicação para evitar problemas com conteúdo */
+html, body, #__next {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cortex-purple-600 hover:bg-cortex-purple-700 text-white py-2 px-4 rounded-md shadow-neon-purple transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-cortex-purple-600 text-cortex-purple-500 hover:bg-cortex-purple-700/10 py-2 px-4 rounded-md transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-dark-card border border-dark-border rounded-lg p-4 shadow-md backdrop-blur-xs;
+  }
+  
+  .input-field {
+    @apply bg-dark-card border border-dark-border focus:border-cortex-purple-600 rounded-md py-2 px-3 text-white w-full outline-none focus:ring-2 focus:ring-cortex-purple-600/30 transition-all duration-300;
+  }
+  
+  .title-glow {
+    @apply text-cortex-purple-500 drop-shadow-[0_0_10px_rgba(163,92,255,0.7)];
+  }
+} 

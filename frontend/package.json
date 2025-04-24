@@ -1,0 +1,53 @@
+{
+  "name": "cortex-map",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron-dev": "electron .",
+    "electron-build": "next build && electron-builder",
+    "build-exe": "next build && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.cortex.map",
+    "productName": "CorteX MAP",
+    "files": [
+      "*.js",
+      "out",
+      "node_modules"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "public/app-icon.ico"
+    }
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "framer-motion": "^11.0.3",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.21",
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.3.3"
+  }
+}
