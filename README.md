@@ -1,6 +1,6 @@
-# CorteX PassiveMap
+# CorteX MAP
 
-CorteX PassiveMap é uma ferramenta de footprint digital baseada em OSINT passivo, desenvolvida pela comunidade CorteX Club, com foco em desempenho extremo, interface gráfica impactante e arquitetura modular.
+CorteX MAP é uma ferramenta de footprint digital baseada em OSINT passivo, desenvolvida pela comunidade CorteX Club, com foco em desempenho extremo, interface gráfica impactante e arquitetura modular.
 
 ## 🔷 Descrição Geral
 
@@ -33,10 +33,10 @@ Uma ferramenta para realizar a coleta automatizada e visualização inteligente 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/cortexclub/cortex-passivemap.git
+git clone https://github.com/cortexclub/cortex-map.git
 
 # Instale as dependências do frontend
-cd cortex-passivemap/frontend
+cd cortex-map/frontend
 npm install
 
 # Compile o backend
@@ -44,7 +44,7 @@ cd ../backend
 cargo build --release
 ```
 
-## 📦 Distribuição
+## 📦 Distribuição (em breve)
 
 Disponível como:
 - .exe (Windows)
